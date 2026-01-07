@@ -15,7 +15,11 @@ type Message struct {
 }
 
 func main() {
-	cep := "71010154"
+	if len(os.Args) < 2 {
+		fmt.Fprintf(os.Stderr, "Erro: Número de argumentos inválido.\n")
+		os.Exit(1)
+	}
+	cep := os.Args[1]
 
 	c := make(chan Message, 2)
 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
@@ -23,7 +27,7 @@ func main() {
 
 	// Goroutine 1: BrasilAPI
 	go func() {
-		url := "https://brasilapi.com.br/api/cep/v1/" + cep
+		url := "https://brasilapi.com.br/api/cep/v1/01153000" + cep
 		requestAPI(ctx, url, "BrasilAPI", c)
 	}()
 
