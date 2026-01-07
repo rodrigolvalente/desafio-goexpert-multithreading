@@ -28,5 +28,5 @@ Baise o código e execute o comando:
 go run main.go <cep>
 
 exemplo:
-```bash
+
 go run main.go 71050034
