@@ -27,7 +27,7 @@ func main() {
 
 	// Goroutine 1: BrasilAPI
 	go func() {
-		url := "https://brasilapi.com.br/api/cep/v1/01153000" + cep
+		url := "https://brasilapi.com.br/api/cep/v1/" + cep
 		requestAPI(ctx, url, "BrasilAPI", c)
 	}()
 
