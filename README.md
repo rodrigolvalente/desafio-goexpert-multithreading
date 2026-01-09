@@ -7,7 +7,7 @@ As duas requisições serão feitas simultaneamente para as seguintes APIs:
 
 ---
 
-https://brasilapi.com.br/api/cep/v1/01153000 + cep
+https://brasilapi.com.br/api/cep/v1/ + cep
 
 http://viacep.com.br/ws/" + cep + "/json/
 
